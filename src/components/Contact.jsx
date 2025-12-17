@@ -8,7 +8,7 @@ const Contact = () => {
       <div className="mt-10 max-w-xl mx-auto text-center animate-fadeIn dark:text-gray-300">
         <p className="text-lg">📩 Email: saranyarajendran790@gmail.com</p>
         <p className="text-lg mt-2">
-          🔗 LinkedIn: <a className="text-blue-500" href="www.linkedin.com/in/saranya-p-4a8bb938b">Your LinkedIn</a>
+          🔗 LinkedIn: <a className="text-blue-500" href="www.linkedin.com/in/saranya-p-4a8bb938b">www.linkedin.com/in/saranya-p-4a8bb938b</a>
         </p>
         <p className="text-lg mt-2">
           💻 GitHub: 
