@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1.2s ease-out;
+}
+
+/* 3D card flip + glow */
+.game-grid {
+  perspective: 1000px;
+}
+
+.card {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%; /* square */
+  position: relative;
+}
+
+.card-inner {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.card.is-flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  font-size: 2rem;
+}
+
+.card-front {
+  transform: rotateY(180deg);
+}
+
+.card-back {
+  background: linear-gradient(135deg, rgba(59,130,246,0.15), rgba(99,102,241,0.12));
+  border: 1px solid rgba(99,102,241,0.12);
+}
+
+/* glow when matched */
+.matched .card-face {
+  box-shadow: 0 8px 24px rgba(99,102,241,0.18), 0 0 18px rgba(99,102,241,0.18) inset;
+}
+
+/* responsive font sizes for emoji */
+.emoji-lg { font-size: 2.6rem; }
+@media (min-width: 768px) { .emoji-lg { font-size: 3.2rem; } }
+
+/* modal backdrop */
+.modal-backdrop {
+  background: rgba(0,0,0,0.45);
+}
+
+
+@keyframes wifiPulse {
+  0% { opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
+
+.wifi-animate {
+  animation: wifiPulse 1.2s infinite;
+}
