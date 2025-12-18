@@ -25,7 +25,7 @@ const Hero = () => {
 
           {/* Portfolio Live Demo */}
           <a
-            href="portfolio-omega-liard-15.vercel.app"
+            href="www.saranyap.live"
             target="_blank"
             rel="noopener noreferrer"
             className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg
