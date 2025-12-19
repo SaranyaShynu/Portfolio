@@ -36,7 +36,7 @@ const Hero = () => {
 
           {/* Download CV */}
           <a
-            href="/Saranya Resume.pdf"
+            href="/Saranya newResume.pdf"
             download
             className="bg-gray-900 text-white px-6 py-3 rounded-lg
                        hover:bg-gray-700 transition duration-300
