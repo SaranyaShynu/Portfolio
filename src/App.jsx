@@ -12,13 +12,19 @@ import Games from "./components/Games";
 
 export default function App() {
   return (
-    <div className="dark:bg-gray-900 dark:text-white min-h-screen">
+    <div className="dark:bg-gray-900 dark:text-white min-h-screen transition-colors">
+      
+      {/* Top Navigation */}
       <Navbar />
+
+      {/* Offline status banner */}
       <OfflineIndicator />
-      <main className="pt-20"> {/* space for navbar */}
+
+      {/* Page Content */}
+      <main className="pt-20">
         <Routes>
 
-          {/* HOME PAGE */}
+          {/* HOME / PORTFOLIO */}
           <Route
             path="/"
             element={
@@ -33,11 +39,13 @@ export default function App() {
             }
           />
 
-          {/* GAMES PAGE */}
+          {/* OFFLINE GAMES */}
           <Route path="/games" element={<Games />} />
 
         </Routes>
       </main>
+
+      {/* Footer */}
       <Footer />
     </div>
   );
